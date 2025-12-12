@@ -1,24 +1,24 @@
 
-def calcular_rula(braco, antebraco, punho, pescoco, tronco, pernas, forca):
+def calculate_rule(arm, forearm, fish, neck, stem, legs, strength):
     # Pontuação simplificada do RULA (não oficial)
-    score_a = braco + antebraco + punho
-    score_b = pescoco + tronco + pernas
-    score_total = score_a + score_b + forca
+    score_a = arm + forearm + fish 
+    score_b = neck + stem + legs
+    score_total = score_a + score_b + strength
 
     # Classificação aproximada
     if score_total <= 6:
-        nivel = "Nível 1 – Postura aceitável se não for mantida por longos períodos"
+        level = "Nível 1 – Postura aceitável se não for mantida por longos períodos"
     elif score_total <= 10:
-        nivel = "Nível 2 – Investigar e talvez mudar"
+        level = "Nível 2 – Investigar e talvez mudar"
     elif score_total <= 14:
-        nivel = "Nível 3 – Mudança necessária rapidamente"
+        level = "Nível 3 – Mudança necessária rapidamente"
     else:
-        nivel = "Nível 4 – Mudanças imediatas necessárias"
+        level = "Nível 4 – Mudanças imediatas necessárias"
 
-    return score_total, nivel
+    return score_total, level
 
 
 # Exemplo:
-score, nivel = calcular_rula(3, 2, 2, 3, 3, 1, 1)
+score, level = calculate_rule(3, 2, 2, 3, 3, 1, 2)
 print("Pontuação RULA:", score)
-print("Avaliação:", nivel)
+print("Avaliação:", level)
